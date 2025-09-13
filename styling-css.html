@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Styling</title>
     <style>
       body {
         font-family: Arial, sans-serif;
-        background-color: #DFDFEE;
+        background-color: #dfdfee;
+        display: flex;
+        justify-content: center;
+          height: 100vh;
+        align-items: center;
+      
+      }
+
+      div {
+        background-color: #f0f0f0;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 50px;
+        text-align: center;
       }
       h1 {
         color: darkblue;
@@ -27,7 +41,9 @@
     </style>
   </head>
   <body>
-    <h1>Hello CSS!</h1>
-    <p>Ini paragraf dengan <span class="highlight">highlight</span>.</p>
+    <div>
+      <h1>Hello CSS!</h1>
+      <p>Ini paragraf dengan <span class="highlight">highlight</span>.</p>
+    </div>
   </body>
 </html>

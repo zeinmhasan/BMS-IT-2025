@@ -1,18 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Belajar Tailwind</title>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-  <style>
-    .font-poppins {
-      font-family: 'Poppins', sans-serif;
-    }
-  </style>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Tailwind</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <style>
+      .font-poppins {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gradient-to-br from-aqua via-blue-400 to-white min-h-screen flex items-center justify-center font-poppins"
+  >
+    <div class="flex flex-col items-center">
+      <img 
+        <img src="https://raw.githubusercontent.com/zeinmhasan/BMS-IT-2025/main/public/WhatsApp%20Image%202025-09-13%20at%2014.18.53_bb9c0df3.jpg"
+        alt="Foto Profil"
+        class="w-50 h-50 rounded-full mb-6 shadow-lg object-cover"
+      />
+      <div class="p-8 rounded-lg shadow-lg text-center bg-white">
+        <h1 class="text-5xl font-bold mb-4 text-blue-600">Hallo All</h1>
+        <p class="text-gray-700">
+          Gw <span class="text-7lg font-bold text-blue-600">zein muhammad hasan </span>, calon software engineering masa depan.
+        </p>
+        <button
+          class="mt-6 px-6 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-700 transition">Contact Me</button>
+           <!-- Social Media -->
+        <div class="flex justify-center gap-6 mt-6">
+          <a
+            href="https://github.com/zeinmhasan"
+            target="_blank"
+            class="hover:scale-110 transition"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+              alt="GitHub"
+              class="w-8 h-8"
+            />
+          </a>
+          <a
+            href="https://instagram.com/"
+            target="_blank"
+            class="hover:scale-110 transition"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg"
+              alt="Instagram"
+              class="w-8 h-8"
+            />
+          </a>
+          <a href="mailto:zein@example.com" class="hover:scale-110 transition">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg"
+              alt="Email"
+              class="w-8 h-8"
+            />
+          </a>
+        </div>
+      </div>
+      </div>
+    </div>
+  </body>
 </html>

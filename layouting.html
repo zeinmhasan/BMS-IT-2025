@@ -1,72 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Layouting</title>
-  <style>
-    .h2 {
-      text-align: center;
-    }
-    .container1 {
-      display: flex;
-      background: blue;
-    }
-    p {
-      border: 1px solid black;
-      text-align: center;
-      width: 50px;
-      padding: 4px;
-      background: white;
-    }
-    .container2 {
-      display: flex;
-      background: red;
-      justify-content: center;
-      gap: 4px;
-    }
-    .container3 {
-      display: flex;
-      background: purple;
-      height: 80px;
-      justify-content: center;
-      align-items: center;
-      gap: 4px;
-    }
-    .halfdiv {
-      display: flex;
-      height: 100px;
-    }
-    .yellow {
-      background: yellow;
-      width: 100%;
-    }
-    .green {
-      background: green;
-      width: 100%;
-}
-  </style>
-</head>
-<body>
-  <h2>Flexbox Layout</h2>
-  <div class="container1">
-    <p>Item 1</p>
-    <p>Item 2</p>
-    <p>Item 3</p>
-  </div>
-  <div class="container2">
-    <p>Item 1</p>
-    <p>Item 2</p>
-    <p>Item 3</p>
-  </div>
-  <div class="container3">
-    <p>Item 1</p>
-    <p>Item 2</p>
-    <p>Item 3</p>
-  </div>
-  <div class="halfdiv">
-    <div class="yellow"></div>
-    <div class="green"></div>
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layouting</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, aqua 0%, #00c3ff 50%, #ffffff 100%);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        align-items: center; /* Tambahkan ini */
+      }
+
+      .main {
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        border: 5px solid black;
+        width: 80vw; /* Ubah dari max-width ke width */
+        box-sizing: border-box; /* Tambahkan ini */
+        max-width: 900px; /* Opsional, agar tidak terlalu lebar di layar besar */
+      }
+
+      h2 {
+        text-align: center;
+      }
+      .container1 {
+        display: flex;
+        background: blue;
+        align-items: center;
+        justify-content: space-around;
+      }
+      p {
+        border: 1px solid black;
+        text-align: center;
+        width: 50px;
+        padding: 4px;
+        background: white;
+      }
+      .container2 {
+        display: flex;
+        background: red;
+        justify-content: center;
+        gap: 4px;
+      }
+      .container3 {
+        display: flex;
+        background: purple;
+        height: 80px;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+      }
+      .halfdiv {
+        display: flex;
+        height: 100px;
+      }
+      .yellow {
+        background: yellow;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .green {
+        background: green;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .yellow-text {
+        background: green;
+        padding: 0 10px;
+        border-radius: 20px;
+        color: white;
+      }
+
+      .green-text {
+        background: yellow;
+        padding: 0 10px;
+        border-radius: 20px;
+        color: black;
+      }
+
+      @media (max-width: 600px) {
+        .main {
+          width: 98vw;
+          max-width: 100vw;
+          margin: 8px;
+          border-width: 2px;
+        }
+        .container1,
+        .container2,
+        .container3 {
+          flex-direction: column;
+          align-items: stretch;
+        }
+        .halfdiv {
+          flex-direction: column;
+          height: auto;
+        }
+        .yellow,
+        .green {
+          width: 100%;
+          min-height: 80px;
+        }
+        h2 {
+          font-size: 1.2em;
+        }
+        h1 {
+          font-size: 1.1em;
+        }
+        p {
+          width: auto;
+          font-size: 0.95em;
+          margin: 4px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Flexbox Layout</h2>
+    <div class="main">
+      <div class="container1">
+        <p>Item 1</p>
+        <p>Item 2</p>
+        <p>Item 3</p>
+      </div>
+      <div class="container2">
+        <p>Item 1</p>
+        <p>Item 2</p>
+        <p>Item 3</p>
+      </div>
+      <div class="container3">
+        <p>Item 1</p>
+        <p>Item 2</p>
+        <p>Item 3</p>
+      </div>
+      <div class="halfdiv">
+        <div class="yellow">
+          <div class="yellow-text">
+            <h1>hallo</h1>
+          </div>
+        </div>
+        <div class="green">
+          <div class="green-text">
+            <h1>haiii</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
